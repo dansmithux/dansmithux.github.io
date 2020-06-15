@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="Dan Smith">
+	<title>Dan Smith | UX Designer</title>
+
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+	<style>
+		.bd-placeholder-img {
+			font-size: 1.125rem;
+			text-anchor: middle;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+
+		@media (min-width: 768px) {
+			.bd-placeholder-img-lg {
+				font-size: 3.5rem;
+			}
+		}
+	</style>
+	<!-- Custom styles for this template -->
+	<link href="cover.css" rel="stylesheet">
+</head>
+
+<body class="text-center">
+	<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+		<header class="masthead mb-auto">
+			<div class="inner">
+				<h3 class="masthead-brand">Dan Smith</h3>
+				<nav class="nav nav-masthead justify-content-center">
+					<a class="nav-link" href="./index.html">Home</a>
+					<span class="nav-link">About</span>	
+					<span class="nav-link">Work</span>	
+					<a class="nav-link active" href="./contact.html">Contact</a>
+				</nav>
+			</div>
+		</header>
+
+		<main role="main" class="inner cover">
+			<h1 class="cover-heading">Contact</h1>
+			<p class="lead"></p>
+
+			<form id="my-form" action="https://formspree.io/xaypjbro" method="POST" class="form text-left">
+
+				<div class="form-group">
+					<label for="name">Name</label>
+					<input type="text" name="name" id="name" class="form-control" required />
+				</div>
+
+				<div class="form-group">
+					<label for="email">Email address</label>
+					<input type="email" name="email" id="email" class="form-control" required/>
+				</div>
+
+				<div class="form-group">
+					<label for="message">Message</label>
+					<input type="text" name="message" id="message" class="form-control" required />
+				</div>
+
+				<input type="text" name="_gotcha" style="display:none" />
+
+				<div class="pt-3">
+					<button id="my-form-button" class="btn btn-lg btn-success">Submit</button>
+					<p id="my-form-status"></p>
+				</div>
+			</form>
+
+		</main>
+
+		<footer class="mastfoot mt-auto">
+			<div class="inner">
+				<p>Copyright &copy; 2020 – Dan Smith</p>
+			</div>
+		</footer>
+	</div>
+
+	<script>
+    	window.addEventListener("DOMContentLoaded", function() {
+
+	        var form = document.getElementById("my-form");
+	        var button = document.getElementById("my-form-button");
+	        var status = document.getElementById("my-form-status");
+
+	        function success() {
+	            form.reset();
+	            button.style = "display: none ";
+	            status.innerHTML = "Thanks!";
+	        }
+
+	        function error() {
+	            status.innerHTML = "Oops! There was a problem.";
+	        }
+
+	        form.addEventListener("submit", function(ev) {
+	            ev.preventDefault();
+	            var data = new FormData(form);
+	            ajax(form.method, form.action, data, success, error);
+	        });
+	    });
+
+	    function ajax(method, url, data, success, error) {
+	        var xhr = new XMLHttpRequest();
+	        xhr.open(method, url);
+	        xhr.setRequestHeader("Accept", "application/json");
+	        xhr.onreadystatechange = function() {
+	            if (xhr.readyState !== XMLHttpRequest.DONE) return;
+	            if (xhr.status === 200) {
+	                success(xhr.response, xhr.responseType);
+	            } else {
+	                error(xhr.status, xhr.response, xhr.responseType);
+	            }
+	        };
+	        xhr.send(data);
+	    }
+	</script>
+
+</body>
+</html>
