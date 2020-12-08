@@ -14,12 +14,12 @@
 
 
 .profile-max-width {
-
     @include media-breakpoint-down(md) {
     	width: 100%;
         max-width: 300px;
     }
 }
+
 
 .videoWrapper {
   position: relative;
@@ -32,4 +32,18 @@
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+
+.carousel-control-next,
+.carousel-control-prev {
+  color: rgba(0,0,0,0.6) !important;
+  transition: all 0.2s ease;
+}
+
+.carousel-control-next:hover,
+.carousel-control-next:focus,
+.carousel-control-prev:hover,
+.carousel-control-prev:focus {
+  color: rgba(0,0,0,0.9) !important;
 }
