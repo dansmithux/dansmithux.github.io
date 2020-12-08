@@ -138,7 +138,7 @@
                             <hr class="my-5">
 
                             <h2 class="mt-4">Solution</h2>
-                            <p>The proposed solution is a responsive web app workflow tool for voice instructors that leverages a specific browser API that enables accompaniment to be quickly modified and sent to a student's device.</p>
+                            <p>The proposed solution is a responsive web app workflow tool for voice instructors that leverages a specific browser API that enables accompaniment to be quickly modified and sent to a student's device, resulting in a much more seamless and effective educational experience.</p>
 
                             <p>I approached the problem by making <strong>research</strong> the driving force, ensuring the user's needs were met, while making sure any of my personal biases were minimized.</p>
 
@@ -158,41 +158,178 @@
                             <h2 class="mt-4">Target audience</h2>
                             <p>The target audience is quite niche, since the problem is highly specific. Voice instructors who teach online lessons are the primary audience, and their students are the secondary audience.</p>
 
+                            <figure class="figure mt-2">
+                                <img src="assets/img/persona-maria.png" class="img-fluid" alt="" data-action="zoom">
+                            </figure>
+
+                            <figure class="figure mt-2">
+                                <img src="assets/img/persona-joe.png" class="img-fluid" alt="" data-action="zoom">
+                            </figure>
+
                             <hr class="my-5">
 
 
                             <h2 class="mt-4">Process</h2>
                             
-                            <p>Each stage informed the next.</p>
+                            <p>For my process, I visualized each research method as a landmark, with its output informing the subsequent research phase. This enabled me to pivot quickly and easily.</p>
 
-                            <figure class="figure mt-2">
-                                <img src="assets/img/process.png" class="img-fluid" alt="" data-action="zoom">
-                            </figure>
 
 
                             <h3 class="mt-4">Ideation</h3>
-                            <p>This is a sample intro paragraph and can be used to introduce.</p>
+                            <p>Initial ideation included sketching, and sacrificial concepts with research respondents:</p>
+
+                            <figure class="figure mt-2">
+                                <img src="assets/img/early-sketches.jpg" class="img-fluid" alt="" data-action="zoom">
+                            </figure>
+
+
+
 
                             <h3 class="mt-4">Research</h3>
-                            <p>This is a sample intro paragraph and can be used to introduce.</p>
+                            <p>As mentioned, research was continual, allowing each phase to inform the next:</p>
+
+                            <figure class="figure mt-2 mb-4">
+                                <img src="assets/img/process.png" class="img-fluid" alt="" data-action="zoom">
+                            </figure>
+
+                            <p>Specific research methods included:</p>
+
+                            <ul>
+                                <li>Semi-structured remote user interviews (30 minutes)</li>
+                                    <ul>
+                                        <li>3 instructors and 3 students</li>
+                                        <li>Used sacrificial concepts for both user types</li>
+                                        <li>For instructors, proposed process idea (capturing pattern on MIDI keyboard, transmitting to student's interface, modulating pre-captured pattern); seemed viable and solved for audio lag issues</li>
+                                        <li>For students, proposed interface visual idea via video recording, showing example from GarageBand:</li>
+                                    </ul>
+                            </ul>
+
+                            <figure class="figure mt-2 mb-4">
+                                <img src="assets/img/garageband.png" class="img-fluid" alt="" data-action="zoom">
+                            </figure>
+
+                            <ul>
+                                <li>Contextual inquiry (30 minutes)</li>
+                                <ul>
+                                    <li>Discussion then observation of 3 instructors and 3 students during online lessons</li>
+                                </ul>
+                                <li>Task analysis (20 minutes)</li>
+                                <ul>
+                                    <li>More in-depth walkthrough with 2 instructors</li>
+                                </ul>
+                                <li>Both research methods helped yield user requirements, user flows (e.g. modes), and wireframes</li>
+                            </ul>
+
+                            <ul>
+                                <li>Usability testing (20 minutes)</li>
+                                <ul>
+                                    <li>Tested mid-fidelity wireframes with 3 instructors</li>
+                                    <li>Helped validate implementation of modes</li>
+                                    <li>Validated layout with mostly static toolbars and dynamic main content</li>
+                                </ul>
+                            </ul>
+
+
+                            <h3 class="mt-4">Research findings</h3>
+
+                            <ul>
+                                <li>Students need accompaniment audio source to be on their end</li>
+                                <ul>
+                                    <li>Allows for better pitch, since piano over video calls can sound "wobbly"/distorted</li>
+                                    <li>Helps student improve ear training and pitch matching</li>
+                                </ul>
+                                <li>Students exert excess mental effort (cognitive load) when they accompany themselves on the piano during exercises</li>
+                                <ul>
+                                    <li>Students exert excess mental effort (cognitive load) when they accompany themselves on the piano during exercises</li>
+                                </ul>
+                                <li>Students generally see online lessons as a bit of a compromise; current perceived value is lower than in-person lessons</li>
+                            </ul>
+
+                            <ul>
+                                <li>Instructors prefer to accompany students and collaborate more directly</li>
+                                <li>Instructors would like to retain control of lesson flow and pace; some of that is lost in online lessons</li>
+                                <li>Instructors currently rely on online lessons to stay in business, and also expand their studios, increasing access to students who might not otherwise have quality local instruction</li>
+                                <li>Goal for some instructors is to change public perception of online lessons and improve perceived value and validity, sometimes hindered by audio lag and technological issues</li>
+                            </ul>
+
+                            <ul>
+                                <li>Both user types need a solution that's easy-to-use, lightweight, and responsive to different devices</li>
+                                <ul>
+                                    <li>Determined video calls would be an unnecessary feature for first version</li>
+                                </ul>                                
+                            </ul>
+
+                            <figure class="figure mt-2 mb-4">
+                                <img src="assets/img/user-requirements.png" class="img-fluid" alt="" data-action="zoom">
+                            </figure>
 
                             <h3 class="mt-4">Concept evolution</h3>
-                            <p>This is a sample intro paragraph and can be used to introduce.</p>
+                            <p>With the aforementioned sketching as a starting place, the design evolved and pivoted as new research shed new light.</p>
 
-                            <h3 class="mt-4">Visual design</h3>
-                            <p>This is a sample intro paragraph and can be used to introduce.</p>
+                            <figure class="figure mt-2 mb-4">
+                                <img src="assets/img/first-iteration.png" class="img-fluid border border-secondary border-1" alt="" data-action="zoom">
+                                <figcaption class="figure-caption text-center">Initial concept: dashboard / SPA layout</figcaption>
+                            </figure>
+
+                            <figure class="figure mt-2 mb-4">
+                                <img src="assets/img/second-iteration.png" class="img-fluid border border-secondary border-1" alt="" data-action="zoom">
+                                <figcaption class="figure-caption text-center">After task analysis, pivoted due to research pointing to modes that provide distinct functionality, flexibility, and structure based on instructor needs</figcaption>
+                            </figure>
+
+                            <figure class="figure mt-2 mb-4">
+                                <img src="assets/img/third-iteration.png" class="img-fluid border border-secondary border-1" alt="" data-action="zoom">
+                                <figcaption class="figure-caption text-center">After usability testing, the modes prototype, moved forward with visual design and refined interaction design</figcaption>
+                            </figure>
+
+                            <figure class="figure mt-2 mb-4">
+                                <img src="assets/img/student-position.png" class="img-fluid border border-secondary border-1" alt="" data-action="zoom">
+                                <figcaption class="figure-caption text-center">The student's interface remained largely the same throughout the process, since, aside from live accompaniment, there were only a few basic (mostly read-only) needs</figcaption>
+                            </figure>
+
+                            <h3 class="mt-4">Design principles</h3>
+                            <p class="mb-0">1. <strong>Keep users informed of system status</strong></p>
+                            <p>Users should be aware of any relevant system mode adjustments with constant feedback and visibility</p>
+                            <p class="mb-0">2. <strong>Design with aesthetics and minimalism in mind</strong></p>
+                            <p>Users shouldn’t feel overloaded with information or stimuli, especially since they’re already either singing or teaching</p>
+                            <p class="mb-0">3. <strong>Make systems flexible so novices and experts can choose to do more or less on them</strong></p>
+                            <p class="mb-5">Users of varying levels of musical experience should be able to customize their experience with features and settings relevant to them</p>
+
+                            <h3 class="mt-4">Other considerations</h3>
+                            <ul>
+                                <li>Progressive disclosure</li>
+                                <ul>
+                                    <li>Used on main view for setting parameters via dropdown menus, modals</li>
+                                </ul>
+                                <li>Staged disclosure</li>
+                                <ul>
+                                    <li>Used in setting pitch range for an auto mode exercise set</li>
+                                </ul>
+                                <li>Responsive enabling</li>
+                                <ul>
+                                    <li>For features and parameters that depend on another condition, namely an active mode</li>
+                                </ul>
+                            </ul>
+
+                            <ul>
+                                <li>Vertical positioning of content for each user's context</li>
+                                <ul>
+                                    <li>An instructor's eyes go between a piano and the application interface very often, so more frequently used content is placed toward the bottom of the screen to reduce the physical distance between either target</li>
+                                    <li>The student's priority is physical alignment and posture, so content was positioned toward the top of the screen to help minimize neck constriction</li>
+                                </ul>
+                            </ul>
+
 
                             <hr class="my-5">
 
 
                             <h2 class="mt-4">Outcome</h2>
-                            <p>This is a sample intro paragraph and can be used to introduce.</p>
+                            <p>What was the end result?</p>
 
                             <h3 class="mt-4">Challenges</h3>
-                            <p>This is a sample intro paragraph and can be used to introduce.</p>
+                            <p>What were the challenges you had to overcome?</p>
 
                             <h3 class="mt-4">Reflection</h3>
-                            <p>This is a sample intro paragraph and can be used to introduce.</p>
+                            <p>What did you learn from completing this project?</p>
 
                             <hr class="my-5">
 
