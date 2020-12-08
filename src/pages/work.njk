@@ -1,0 +1,64 @@
+{% extends "layouts/default.njk" %}
+{% set title = "Work" %}
+{% block content -%}
+{% import 'macros/header.njk' as header -%}
+{{header.nav('bg-black', 'border-dark', 'navbar-dark', 'work')}}
+    <main id="content">
+
+        <!-- Hero -->
+        <div class="container">
+            <div class="row py-5">
+                <div class="col-lg-9">
+                    <h1 class="display-4 mb-4">Work</h1>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects -->
+        <div class="container pb-4">
+            <h2 class="mb-4">UX</h2>
+            <ul class="row list-unstyled mb-4">
+                <li class="col-md-6 mb-3">
+                    <a href="vocalio.html">
+                        <figure>
+                            <div class="img-overlay mb-3">
+                                <img src="assets/img/vocalio-screenshot.png" alt="Architecture" class="img-thumbnail">
+                                <div class="img-hover">
+                                    <p class="img-text"><span class="align-text-top">View case study</span>&nbsp;<i class="material-icons align-middle">arrow_forward_ios</i></p>
+                                </div>
+                            </div>
+                            <figcaption class="h5 font-weight-normal text-center">Vocalio</figcaption>
+                        </figure>
+                    </a>
+                </li>
+            </ul>
+
+            <h2 class="mb-4">Web</h2>
+            <ul class="row list-unstyled mb-4">
+                <li class="col-md-6 mb-3">
+                    <figure>
+                        <div class="img-overlay mb-3">
+                            <img src="assets/img/portfolio-2.jpg" alt="Architecture" class="img-thumbnail">
+                            <div class="img-hover">
+                                <p class="img-text"><em>Coming soon</em></p>
+                            </div>
+                        </div>
+                        <figcaption class="h5 font-weight-normal text-center">Symbol Design Studio</figcaption>
+                    </figure>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <!-- Call to action -->
+        <div class="bg-primary text-dark text-center">
+            <div class="container py-6">
+                <h2>How can I help?</h2>
+                <a href="contact.html" class="btn btn-light mt-4 mb-2"><span class="align-text-top">Get in touch</span>&nbsp;<i class="material-icons align-middle">arrow_forward_ios</i></a>
+            </div>
+        </div>
+    </main>
+    {% import 'macros/footer.njk' as footer -%}
+    {{footer.footer('bg-white', 'text-dark')}}
+{% endblock %}

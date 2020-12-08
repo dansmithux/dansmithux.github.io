@@ -1,0 +1,94 @@
+{% extends "layouts/default.njk" %}
+{% set title = "Work / Vocalio" %}
+{% block content -%}
+{% import 'macros/header.njk' as header -%}
+{{header.nav('bg-black', 'border-dark', 'navbar-dark', 'work')}}
+    <main id="content">
+
+        <!-- Article -->
+        <div class="container py-6">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h1>Vocalio: improving the user experience of online voice lessons</h1>
+                    <hr class="border-1 border-light my-4 ml-0 text-left w-15" role="presentation">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="assets/img/profile.jpg" class="avatar avatar-sm mr-3" alt="Tim Schoch">
+                        <div class="font-italic small text-light">by <a href="profile.html">Dan Smith</a></div>
+                        <div class="small text-secondary ml-auto">October&ndash;December 2020</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white text-black">
+            <div class="container py-2">
+                <div class="bg-white mt-n6 px-3 px-lg-0">
+                    <div class="row justify-content-center py-4 py-lg-5">
+                        <div class="col-md-10 col-lg-8">
+
+                            <p>Intro paragraph.</p>
+
+                            <figure class="figure mt-2">
+                                <img src="assets/img/vocalio-screenshot.png" class="img-fluid border-secondary img-thumbnail" alt="" data-action="zoom">
+                                <figcaption class="figure-caption p-2 text-center">Latest iteration of interface</figcaption>
+                            </figure>
+
+                            <h2 class="mt-4">Background</h2>
+                            <p>This is a sample intro paragraph and can be used to introduce readers to your article. Proin sodales quam nec ante sollicitudin lacinia. Ut egestas bibendum tempor.</p>
+
+                            <h2 class="mt-4">Contributions</h2>
+                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint <a href="#">occaecat cupidatat</a> non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            
+                            <h2 class="mt-4">Timeline</h2>
+                            <p>This is a sample intro paragraph and can be used to introduce readers to your article. Proin sodales quam nec ante sollicitudin lacinia. Ut egestas bibendum tempor.</p>
+
+                            <h2 class="mt-4">Problem</h2>
+                            <p>This is a sample intro paragraph and can be used to introduce readers to your article. Proin sodales quam nec ante sollicitudin lacinia. Ut egestas bibendum tempor.</p>
+
+                            <h2 class="mt-4">Concept/Solution</h2>
+                            <p>This is a sample intro paragraph and can be used to introduce readers to your article. Proin sodales quam nec ante sollicitudin lacinia. Ut egestas bibendum tempor.</p>
+
+                            <div class="videoWrapper">
+                              <iframe width="560" height="349" src="https://www.youtube-nocookie.com/embed/AFXtGund0hQ?rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+
+                            <h2 class="mt-4">Target Audience</h2>
+                            <p>This is a sample intro paragraph and can be used to introduce readers to your article. Proin sodales quam nec ante sollicitudin lacinia. Ut egestas bibendum tempor.</p>
+
+                            <h2 class="mt-4">Research</h2>
+                            <p>This is a sample intro paragraph and can be used to introduce readers to your article. Proin sodales quam nec ante sollicitudin lacinia. Ut egestas bibendum tempor.</p>
+
+                            <h2 class="mt-4">Concept Evolution</h2>
+                            <p>This is a sample intro paragraph and can be used to introduce readers to your article. Proin sodales quam nec ante sollicitudin lacinia. Ut egestas bibendum tempor.</p>
+
+                            <h2 class="mt-4">Visual Design</h2>
+                            <p>This is a sample intro paragraph and can be used to introduce readers to your article. Proin sodales quam nec ante sollicitudin lacinia. Ut egestas bibendum tempor.</p>
+
+                            <h2 class="mt-4">Outcome</h2>
+                            <p>This is a sample intro paragraph and can be used to introduce readers to your article. Proin sodales quam nec ante sollicitudin lacinia. Ut egestas bibendum tempor.</p>
+
+                            <h2 class="mt-4">Challenges</h2>
+                            <p>This is a sample intro paragraph and can be used to introduce readers to your article. Proin sodales quam nec ante sollicitudin lacinia. Ut egestas bibendum tempor.</p>
+
+                            <h2 class="mt-4">Reflection</h2>
+                            <p>This is a sample intro paragraph and can be used to introduce readers to your article. Proin sodales quam nec ante sollicitudin lacinia. Ut egestas bibendum tempor.</p>
+                            
+                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                            <hr class="my-5">
+
+                            <a href="work.html" class="btn btn-sm btn-outline-dark mr-2 mb-3">
+                                <i class="material-icons" style="vertical-align: middle;">arrow_back_ios</i>
+                                <span style="vertical-align: middle;">Back to all work</span>
+                            </a>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{% import 'macros/footer.njk' as footer -%}
+{{footer.footer('bg-light', 'text-black')}}
+{% endblock %}
