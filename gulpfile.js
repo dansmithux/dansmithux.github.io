@@ -9,6 +9,7 @@ const   autoprefixer    = require('autoprefixer'),
         imagemin        = require('gulp-imagemin'),
         nunjucks        = require('gulp-nunjucks-render'),
         postcss         = require('gulp-postcss'),
+        popper          = require('popper.js'),
         purgecss        = require('@fullhuman/postcss-purgecss'),
         sass            = require('gulp-sass'),
         uglify          = require('gulp-uglify');
@@ -31,7 +32,7 @@ const paths = {
         dest: 'dist/assets/img'
     },
     js: {
-        jquery: 'node_modules/jquery/dist/jquery.slim.js',
+        jquery: 'node_modules/jquery/dist/jquery.min.js',
         popper: 'node_modules/popper.js/dist/umd/popper.js',
         bootjs: 'node_modules/bootstrap/dist/js/bootstrap.js',
         zoom: 'node_modules/zoom-vanilla.js/dist/zoom-vanilla.min.js',

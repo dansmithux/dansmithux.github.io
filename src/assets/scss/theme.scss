@@ -47,3 +47,13 @@
 .carousel-control-prev:focus {
   color: rgba(0,0,0,0.9) !important;
 }
+
+
+a.clipboard {
+  cursor: pointer;
+  // text-decoration: none;
+  // box-shadow: initial;
+  // border-color: transparent !important;
+  background-color: $gray-200;
+  padding: 1px;
+}

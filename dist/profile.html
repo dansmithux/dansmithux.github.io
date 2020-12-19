@@ -20,6 +20,9 @@
 
     <!-- JS -->
     <script src="assets/js/theme.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
 </head>
 
 <body>
@@ -55,6 +58,7 @@
     </div>
 </header>
 
+
     <main id="content">
 
         <div class="container py-6">
@@ -81,9 +85,9 @@
 
                             <p>I'm driven to understand and optimize our human experience — especially how we interact with technology. As an empathetic technologist, I feel called to create ethical, accessible, thoughtful products and experiences that positively impact and enrich&nbsp;us.</p>
 
-                            <p>I recently completed a master's degree in user experience design at <a href="https://www.mica.edu/" target="_blank">Maryland Institute College of Art</a>, while working at Microsoft as a front-end developer. I also hold a UX certificate <small>(#1015101)</small> from the <a href="https://www.nngroup.com/ux-certification/verify/" target="_blank">Nielsen Norman Group</a>, with 72 contact hours of interaction design and UX research coursework thus&nbsp;far.</p>
+                            <p>I recently completed a master's degree in user experience design at <a href="https://www.mica.edu/" target="_blank">Maryland Institute College of Art</a>, while working at Microsoft as a front-end developer. I also hold a UX certificate from the <a href="https://www.nngroup.com/ux-certification/verify/" target="_blank">Nielsen Norman Group</a> <small>(certification ID #<a class="clipboard" data-clipboard-text="1015101" data-toggle="tooltip" title="Copy to clipboard" data-placement="top" data-animation="true">1015101</a>)</small>, with 72 contact hours of interaction design and UX research coursework thus&nbsp;far.</p>
 
-                            <p>Outside of tech and design, I enjoy listening to and <a href="https://soundcloud.com/dansmithvocal" target="_blank">making music</a>, working out, traveling, learning languages, reading about psychology, and swimming.</p>
+                            <p>Outside of tech and design, I enjoy listening to and <a href="https://soundcloud.com/dansmithvocal" target="_blank">making music</a>, working out, traveling, learning languages, reading about psychology, and&nbsp;swimming.</p>
 
                             <h3 class="mt-5">Skills</h3>
                             <ul>
@@ -104,16 +108,17 @@
                                 <li>
                                     <p>
                                         <strong>Master&nbsp;of&nbsp;Professional&nbsp;Studies</strong> <small>(MPS)</small> in User&nbsp;Experience&nbsp;Design<br>
-                                        <a href="https://www.mica.edu/" target="_blank">Maryland&nbsp;Institute&nbsp;College&nbsp;of&nbsp;Art</a><br>
+                                        <a href="https://www.mica.edu/" target="_blank">Maryland&nbsp;Institute&nbsp;College&nbsp;of&nbsp;Art (MICA)</a><br>
                                         August&nbsp;2019&ndash;December&nbsp;2020<br>
+                                        <em>Recipient of MICA UX Design Thesis Award</em><br>
                                         <em>4.0 GPA</em>
                                     </p>
                                 </li>
                                 <li>
                                     <p>
-                                        <strong>UX Certificate</strong> <small>(UXC)</small> with Interaction&nbsp;Design&nbsp;Speciality<br>
+                                        <strong>UX Certificate</strong> <small>(UXC)</small> with Interaction&nbsp;Design&nbsp;Specialty<br>
                                         <a href="https://www.nngroup.com/ux-certification/verify/" target="_blank">Nielsen Norman Group</a><br>
-                                        Certificate #1015101
+                                        Certification ID #<a class="clipboard" data-clipboard-text="1015101" data-toggle="tooltip" title="Copy to clipboard" data-placement="top" data-animation="true">1015101</a>
                                     </p>
                                 </li>
                                 <li>
@@ -151,8 +156,8 @@
                             </ul>
 
                             <div>
-                                <a href="#" class="btn btn-secondary mt-3"><span class="align-text-top">View r&eacute;sum&eacute; <small>(PDF)</small></span>&nbsp;<i class="material-icons align-middle">arrow_forward_ios</i></a>
-                            </div>
+<!--                                 <a href="#" class="btn btn-secondary mt-3"><span class="align-text-top">View r&eacute;sum&eacute; <small>(PDF)</small></span>&nbsp;<i class="material-icons align-middle">arrow_forward_ios</i></a>
+                            </div> -->
 
                             <div>
                                 <a href="https://www.linkedin.com/in/dansmithux/" target="_blank" class="btn btn-outline-secondary mt-3"><i class="material-icons align-middle">person_add_alt_1</i>&nbsp;<span class="align-text-top">Connect on LinkedIn</span></a>
@@ -268,6 +273,21 @@
             </div>
         </div>
     </main>
+
+
+    <script>
+
+        $(document).ready(function() {
+            $("body").tooltip({ selector: '[data-toggle=tooltip]' });
+        });
+
+        new ClipboardJS('.clipboard');
+
+    </script>
+
+
+
+
 
     <footer class="bg-light text-black">
         <div class="container py-5 py-md-6">
