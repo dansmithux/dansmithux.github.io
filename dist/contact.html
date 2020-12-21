@@ -75,7 +75,7 @@
                 <div class="bg-white mt-n6 px-3 px-lg-0">
                     <div class="row justify-content-center py-4 py-lg-5">
                         <div class="col-md-10 col-lg-8">
-                            <p>Fields marked with an <span class="text-danger">*</span> are required.</p>
+                            <p><em>Fields marked with <span class="text-danger">*</span> are required</em></p>
                             <form id="contact-form" action="https://formspree.io/xaypjbro" method="POST" class="py-4">
                                 <div class="form-group">
                                     <label for="inputName">Name <span class="text-danger">*</span></label>
@@ -87,8 +87,12 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="messageTetxarea">Message <span class="text-danger">*</span></label>
-                                    <textarea class="form-control" name="message" id="messageTetxarea" rows="9" placeholder="Enter your message" required></textarea>
+                                    <textarea class="form-control" name="message" id="messageTetxarea" rows="3" placeholder="Enter your message" required></textarea>
                                 </div>
+                                <div class="form-group">
+                                    <label for="inputName">To verify you're human, what is the sum of two and three? <span class="text-danger">*</span></label>
+                                    <input type="text" name="spam" class="form-control" id="inputSpam" placeholder="Enter a number" required>
+                                </div>                                
                                 <div>
                                     <button type="submit" id="contact-form-button" class="btn btn-pill btn-primary">Submit</button>
                                     <p id="contact-form-status"></p>
@@ -107,6 +111,7 @@
             var form = document.getElementById("contact-form");
             var button = document.getElementById("contact-form-button");
             var status = document.getElementById("contact-form-status");
+            var spam = document.getElementById("inputSpam");
 
             function success() {
                 form.reset();
@@ -122,6 +127,10 @@
 
             form.addEventListener("submit", function(ev) {
                 ev.preventDefault();
+                if (parseInt(spam.value) !== 5) {
+                    status.innerHTML = "Oops! Try a different number.";
+                    return;
+                }
                 button.disabled = true;
                 var data = new FormData(form);
                 ajax(form.method, form.action, data, success, error);
