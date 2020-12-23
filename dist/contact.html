@@ -33,6 +33,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
     <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 
 </head>
@@ -101,10 +102,7 @@
                                     <label for="messageTetxarea">Message <span class="text-danger">*</span></label>
                                     <textarea class="form-control" name="message" id="messageTetxarea" rows="3" placeholder="Enter your message" required></textarea>
                                 </div>
-                                <div class="form-group">
-                                    <label for="inputName">To verify you're human, what is the sum of two and three? <span class="text-danger">*</span></label>
-                                    <input type="text" name="spam" class="form-control" id="inputSpam" placeholder="Enter a number" required>
-                                </div>                                
+                                <div class="g-recaptcha form-group" data-sitekey="6LcIfxEaAAAAAF0bFGgasddwygDRMgmYagEdSu5n"></div>
                                 <div>
                                     <button type="submit" id="contact-form-button" class="btn btn-pill btn-primary">Submit</button>
                                     <p id="contact-form-status"></p>
@@ -133,16 +131,12 @@
             }
 
             function error() {
-                status.innerHTML = "Oops! There was a problem.";
+                status.innerHTML = "Please complete the reCAPTCHA above.";
                 button.disabled = false;
             }
 
             form.addEventListener("submit", function(ev) {
                 ev.preventDefault();
-                if (parseInt(spam.value) !== 5) {
-                    status.innerHTML = "Oops! Try a different number.";
-                    return;
-                }
                 button.disabled = true;
                 var data = new FormData(form);
                 ajax(form.method, form.action, data, success, error);
@@ -157,8 +151,10 @@
                 if (xhr.readyState !== XMLHttpRequest.DONE) return;
                 if (xhr.status === 200) {
                     success(xhr.response, xhr.responseType);
+                    console.log("Success: " + xhr.response);
                 } else {
                     error(xhr.status, xhr.response, xhr.responseType);
+                    console.log("Error: " + xhr.status + ", response: " + xhr.response);
                 }
             };
             xhr.send(data);
