@@ -12,7 +12,9 @@ const   autoprefixer    = require('autoprefixer'),
         popper          = require('popper.js'),
         purgecss        = require('@fullhuman/postcss-purgecss'),
         sass            = require('gulp-sass'),
-        uglify          = require('gulp-uglify');
+        uglify          = require('gulp-uglify'),
+        anime           = require('animejs');
+
 
 // Paths
 

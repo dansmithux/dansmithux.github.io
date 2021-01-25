@@ -7,22 +7,28 @@
 
         <!-- Hero -->
         <div class="container py-5">
-            <h1 class="display-2 pb-2">
-                Well hello, world!
+            <h1 class="display-2 pb-2 hero-animation">
+                <span class="text-wrapper">
+                    <span class="word">Well </span>
+                    <span class="word">hello, </span>
+                    <span class="word">world!</span>
+                </span>
             </h1>
-            <hr class="border-3 border-white my-4 ml-0 text-left w-25" role="presentation">
-            <div class="row">
+
+            <hr class="border-3 border-white my-4 ml-0 text-left hero-animation-line" role="presentation">
+
+            <div class="row hero-animation-body">
                 <div class="col-lg-8">
                     <p class="font-serif lead mb-4 text-secondary">
                         Multidisciplinary UX technologist with special interests in interaction design, information architecture, user research, and front-end development
                     </p>
                 </div>
             </div>
-            <a href="profile.html" class="btn btn-primary align-middle"><span class="align-text-top">Read profile</span>&nbsp;<i class="material-icons align-middle">arrow_forward_ios</i></a>
+            <a href="profile.html" class="btn btn-primary align-middle hero-animation-body"><span class="align-text-top">Read profile</span>&nbsp;<i class="material-icons align-middle">arrow_forward_ios</i></a>
         </div>
 
         <!-- Projects -->
-        <div class="container py-4">
+        <div class="container py-4 hero-animation-body">
             <ul class="row list-unstyled">
                 <li class="col-md-6 mb-3">
                     <a href="vocalio.html">
@@ -98,6 +104,38 @@
             </div>
         </div>
     </main>
+
+    <!-- For title text animation in header.njk -->
+    <script>
+
+    anime.timeline({loop: false})
+      .add({
+        targets: '.hero-animation .word',
+        scale: [0.75,1],
+        opacity: [0,1],
+        translateZ: 0,
+        easing: "easeOutExpo",
+        duration: 300,
+        delay: (el, i) => 150 * (i+1)
+      }).add({
+        targets: '.hero-animation-line',
+        // scaleX: [0,1],
+        width: [0, '25%'],
+        opacity: [0.5,1],
+        easing: "easeOutExpo",
+        duration: 360,
+        delay: (el, i, l) => 10 * (l - i)
+      }).add({
+        targets: '.hero-animation-body',
+        scaleX: [1,1],
+        translateY: [18,0],
+        opacity: [0,1],
+        easing: "easeOutExpo",
+        duration: 800,
+        delay: (el, i, l) => 10 * (l - i)
+      });
+    </script>
+
     {% import 'macros/footer.njk' as footer -%}
     {{footer.footer('bg-white', 'text-dark')}}
 {% endblock %}
