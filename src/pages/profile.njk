@@ -23,7 +23,7 @@
             <div class="container py-2">
                 <div class="bg-white mt-n6 px-3 px-lg-0">
                     <div class="row justify-content-center py-4 py-lg-5">
-                        <div class="col-md-10 col-lg-8">
+                        <div class="col-md-10 col-lg-8 profile-animation-body">
 
                             <h2 class="">Profile</h2>
                             <p class="lead">Technical, creative, curious, user-centric problem&nbsp;solver</p>
@@ -220,19 +220,13 @@
         </div>
     </main>
 
-
     <script>
-
         $(document).ready(function() {
             $("body").tooltip({ selector: '[data-toggle=tooltip]' });
         });
 
         new ClipboardJS('.clipboard');
-
     </script>
-
-
-
 
 {% import 'macros/footer.njk' as footer -%}
 {{footer.footer('bg-light', 'text-black')}}
