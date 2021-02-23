@@ -1,20 +1,97 @@
-{% extends "layouts/default.njk" %}
-{% set title = "Work / Vocalio" %}
-{% block content -%}
-{% import 'macros/header.njk' as header -%}
-{{header.nav('bg-black', 'border-dark', 'navbar-dark', 'work')}}
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VVR97X6L2R"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-VVR97X6L2R');
+    </script>
+    
+    <title>Dan Smith | Work / Sustain-A-Bowl</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Goole fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,600%7CFira+Sans:300,400,400i,600" rel="stylesheet">
+
+    <!-- Material icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/theme.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/icon.png" type="image/png">
+
+    <!-- JS -->
+    <script src="assets/js/theme.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+
+<header class="site-header fixed-top bg-black border-bottom border-dark">
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+    <div class="container">
+
+        <!-- Navbar -->
+        <nav class="navbar main-nav navbar-expand-lg navbar-dark" aria-label="Main navigation">
+            <a href="/" class="navbar-brand d-inline-flex text-uppercase">Dan Smith <i class="material-icons ml-2" aria-hidden="true">desktop_mac</i></a>
+
+            <button class="navbar-toggler hamburger hamburger--spin" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+
+            </button>
+  
+
+            <div class="collapse navbar-collapse text-uppercase" id="navbarContent">
+                <ul class="navbar-nav ml-auto">
+                    
+                    <li class="nav-item">
+                        <a href="profile.html" class="nav-link">Profile</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="work.html" class="nav-link active">Work</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+
+
     <main id="content">
 
         <!-- Article -->
         <div class="container py-6">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <h1>Vocalio: improving the user experience of online voice lessons</h1>
+                    <h1>Sustain-A-Bowl: mobile app for a healthy, environment-focused food truck business</h1>
                     <hr class="border-1 border-light my-4 ml-0 text-left w-15" role="presentation">
                     <div class="d-flex align-items-center mb-3">
                         <img src="assets/img/profile.jpg" class="avatar avatar-sm mr-3" alt="Dan Smith profile photo">
                         <div class="font-italic small text-light">by <a href="profile.html">Dan Smith</a></div>
-                        <div class="small text-secondary ml-auto">October&ndash;December 2020</div>
+                        <div class="small text-secondary ml-auto">May 2020&ndash;September 2020</div>
                     </div>
                 </div>
             </div>
@@ -315,6 +392,34 @@
             </div>
         </div>
     </main>
-{% import 'macros/footer.njk' as footer -%}
-{{footer.footer('bg-light', 'text-black')}}
-{% endblock %}
+
+    <footer class="bg-light text-black">
+        <div class="container py-5 py-md-6">
+            <div class="row justify-content-md-between">
+                <div class="col-4 col-md-2">
+                    <a href="profile.html"><h2 class="h6">Profile</h2></a>
+                    <ul class="nav flex-column">
+                    </ul>
+                </div>
+                <div class="col-4 col-md-2">
+                    <a href="work.html"><h2 class="h6 mb-3">Work</h2></a>
+                    <ul class="nav flex-column">
+                        <li class="mb-1"><a href="vocalio.html" target="_blank" class="text-muted">Vocalio</a></li>
+                    </ul>
+                </div>
+                <div class="col-4 col-md-2">
+                    <a href="contact.html"><h2 class="h6 mb-3">Contact</h2></a>
+                    <ul class="nav flex-column">
+                        <li class="mb-1"><a href="https://www.linkedin.com/in/dansmithux/" target="_blank" class="text-muted">LinkedIn</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-12 col-md-4 mt-4 mt-md-0">
+                    © 2021 Dan Smith
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+
