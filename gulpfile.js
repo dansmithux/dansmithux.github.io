@@ -30,7 +30,7 @@ const paths = {
         dest: 'dist/assets/css'
     },
     img: {
-        src: 'src/assets/img/**/*{png,jpg,gif,svg,ico}',
+        src: 'src/assets/img/**/*{png,jpg,gif,svg,ico,pdf}',
         dest: 'dist/assets/img'
     },
     js: {
