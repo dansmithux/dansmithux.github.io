@@ -63,8 +63,9 @@
 
 .carousel-control-next,
 .carousel-control-prev {
-  color: rgba(0,0,0,0.6) !important;
+  color: rgba(0,0,0,0.5) !important;
   transition: all 0.2s ease;
+  width: 10%;
 }
 
 .carousel-control-next:hover,
@@ -74,6 +75,13 @@
   color: rgba(0,0,0,0.9) !important;
 }
 
+.carousel-indicators {
+  margin-bottom: 0;
+    bottom: -24px;
+  li {
+    background-color: rgba(0,0,0,.2);
+  }
+}
 
 a.clipboard {
   cursor: pointer;
