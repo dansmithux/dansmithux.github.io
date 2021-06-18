@@ -17,3 +17,10 @@
     }
 
 }
+
+a.btn.btn-outline-white {
+    color: #fff;
+    &:hover {
+        color: #000;
+    }
+}
